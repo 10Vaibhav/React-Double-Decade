@@ -8,6 +8,7 @@ import menus from "./Components/tree-view-data.js";
 import TreeView from "./Components/tree-view.jsx";
 import QRCodeGenerator from "./Components/QR-Code-Generator.jsx"
 import ThemeSwitcher from "./Components/ThemeSwitcher.jsx";
+import ScrollIndicator from "./Components/Scroll-Indicator.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <TreeView menus={menus}/>
       <QRCodeGenerator/>
       <ThemeSwitcher/>
+      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
     </div>
   );
 }

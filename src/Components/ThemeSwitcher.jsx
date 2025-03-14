@@ -24,7 +24,7 @@ export default function ThemeSwitcher() {
                 <p className="text-gray-800 dark:text-gray-200 text-xl mb-4">
                     Hello World!
                 </p>
-                <button 
+                <button
                     onClick={handleToggleTheme}
                     className="px-4 py-2 rounded-md bg-rose-400 hover:bg-rose-600 
                              text-white font-medium transition-colors duration-200
