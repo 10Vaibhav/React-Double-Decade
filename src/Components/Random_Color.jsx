@@ -39,26 +39,26 @@ export default function RandomColor() {
   },[typeOfColor])
 
   return (
-    <div className="w-[1000px] h-[600px] border-2 border-gray-700 bg-white  flex flex-col  items-center">
-      <div className="py-10 space-x-5 flex justify-center">
-        <button onClick={()=> setTypeOfColor('hex')} className="px-4 py-2  bg-gradient-to-r from-blue-300 to-indigo-400 text-white rounded">
+    <div className="max-w-4xl w-full rounded-2xl shadow-lg bg-white overflow-hidden">
+      <div className="py-8 px-6 space-x-4 flex justify-center bg-gray-50">
+        <button onClick={()=> setTypeOfColor('hex')} 
+          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
           Create HEX Color
         </button>
-        <button onClick={()=> setTypeOfColor('rgb')} className="px-4 py-2  bg-gradient-to-r from-blue-300 to-indigo-400 text-white rounded">
+        <button onClick={()=> setTypeOfColor('rgb')} 
+          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
           Create RGB Color
         </button>
-        <button onClick={
-          typeOfColor === 'hex' ? handleCreateRandomHexColor
-                                : handleCreateRandomRgbColor
-        } className="px-4 py-2  bg-gradient-to-r from-blue-300 to-indigo-400 text-white rounded">
+        <button onClick={typeOfColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor} 
+          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
           Generate Random Color
         </button>
       </div>
 
-      <div className="w-[800px] h-[500px] mb-6" style={{background: color}}>
-        <div className="flex flex-col justify-center items-center text-white text-xl mt-5 font-bold h-full w-full">
-          <h3>{typeOfColor === 'rgb' ? 'RGB Color': 'HEX Color'}</h3>
-          <h1 className="mt-20">{color}</h1>
+      <div className="transition-colors duration-500" style={{background: color}}>
+        <div className="flex flex-col justify-center items-center text-white min-h-[500px] backdrop-blur-sm bg-black/10">
+          <h3 className="text-2xl font-medium">{typeOfColor === 'rgb' ? 'RGB Color': 'HEX Color'}</h3>
+          <h1 className="mt-6 text-4xl font-bold">{color}</h1>
         </div>
       </div>
     </div>

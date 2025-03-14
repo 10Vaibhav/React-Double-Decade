@@ -45,10 +45,10 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   }
 
   return (
-    <div className="relative w-[1000px] h-[600px]">
+    <div className="relative max-w-[1000px] w-full h-[600px] mx-auto">
       <BsArrowLeftCircleFill
         onClick={handlePrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-4xl text-gray-800 cursor-pointer hover:text-gray-600 transition-colors z-10"/>
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-4xl text-white/80 cursor-pointer hover:text-white transition-all duration-300 drop-shadow-lg z-10"/>
       {images && images.length
         ? images.map((imageItem, index) => (
             <img
@@ -57,25 +57,25 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
               src={imageItem.download_url}
               className={
                 currentSlide === index
-                  ? "w-full h-full rounded-lg shadow-md"
-                  : "hidden w-full h-full rounded-lg shadow-md"
+                  ? "w-full h-full object-cover rounded-xl shadow-xl"
+                  : "hidden"
               }
             />
           ))
         : null}
       <BsArrowRightCircleFill
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-4xl text-gray-800 cursor-pointer hover:text-gray-600 transition-colors z-10"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-4xl text-white/80 cursor-pointer hover:text-white transition-all duration-300 drop-shadow-lg z-10"
       />
-      <div className="absolute bottom-4 flex justify-center w-full">
+      <div className="absolute bottom-4 flex justify-center w-full gap-2">
         {images && images.length
           ? images.map((_, index) => (
               <button
                 key={index}
                 className={
                   currentSlide === index
-                    ? "h-4 w-4 mx-1 rounded-full bg-white cursor-pointer"
-                    : "h-4 w-4 mx-1 rounded-full bg-gray-500 cursor-pointer"
+                    ? "h-3 w-3 rounded-full bg-white shadow-md transition-all duration-300"
+                    : "h-3 w-3 rounded-full bg-white/50 hover:bg-white/70 transition-all duration-300"
                 }
                 onClick={() => setCurrentSlide(index)}
               ></button>

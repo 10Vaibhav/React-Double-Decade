@@ -24,13 +24,11 @@ export default function Accordion() {
   }
 
   return (
-    <div className="max-w-xl mx-auto  p-6 flex-col rounded-xl shadow-lg bg-[#FCF8F3]">
-      <div className="flex justify-center mb-6">
+    <div className="max-w-2xl mx-auto p-8 rounded-2xl shadow-lg bg-gradient-to-br from-[#FCF8F3] to-white">
+      <div className="flex justify-center mb-8">
         <button
-          className="px-4 py-2  text-black rounded-lg   bg-gradient-to-r from-blue-100 to-indigo-200 hover:from-blue-200 hover:to-indigo-100 transition-all duration-200"
-          onClick={() => {
-            setEnableMultiSelection(!enableMultiSelection);
-          }}
+          className="px-6 py-3 text-indigo-700 font-medium rounded-lg bg-gradient-to-r from-indigo-100 to-blue-100 hover:from-indigo-200 hover:to-blue-200 transition-all duration-300 shadow-sm hover:shadow"
+          onClick={() => setEnableMultiSelection(!enableMultiSelection)}
         >
           Enable Multiple Selection
         </button>
@@ -40,7 +38,7 @@ export default function Accordion() {
           data.map((dataItem) => (
             <div
               key={dataItem.id}
-              className="border border-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
+              className="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
             >
               <div
                 onClick={
@@ -48,12 +46,12 @@ export default function Accordion() {
                     ? () => handleMultipleSelection(dataItem.id)
                     : () => handleSingleSelection(dataItem.id)
                 }
-                className="flex justify-between items-center p-4 cursor-pointer bg-gradient-to-r from-blue-100 to-indigo-200 hover:from-blue-200 hover:to-indigo-100 transition-all duration-200"
+                className="flex justify-between items-center p-5 cursor-pointer bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all duration-300"
               >
                 <h3 className="text-lg font-medium text-gray-800">
                   {dataItem.question}
                 </h3>
-                <span className="text-xl font-bold text-indigo-600 transform transition-transform duration-200 ease-in-out">
+                <span className="text-2xl font-medium text-indigo-600 transform transition-transform duration-300">
                   {enableMultiSelection
                     ? multiple.indexOf(dataItem.id) !== -1
                       ? "-"
@@ -65,19 +63,19 @@ export default function Accordion() {
               </div>
               {enableMultiSelection
                 ? multiple.indexOf(dataItem.id) !== -1 && (
-                    <div className="p-5 bg-white border-gray-100 text-gray-600 ">
+                    <div className="p-6 bg-white/80 text-gray-700 leading-relaxed">
                       {dataItem.answer}
                     </div>
                   )
                 : selected === dataItem.id && (
-                    <div className="p-5 bg-white border-gray-100 text-gray-600 ">
+                    <div className="p-6 bg-white/80 text-gray-700 leading-relaxed">
                       {dataItem.answer}
                     </div>
                   )}
             </div>
           ))
         ) : (
-          <div className="text-center p-8 bg-gray-200 rounded-lg text-gray-500">
+          <div className="text-center p-8 bg-gray-50 rounded-xl text-gray-500 font-medium">
             No Data Found
           </div>
         )}

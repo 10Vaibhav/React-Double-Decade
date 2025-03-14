@@ -4,6 +4,8 @@ import ImageSlider from "./Components/ImageSlider.jsx";
 import LoadMoreData from "./Components/LoadMoreData.jsx";
 import RandomColor from "./Components/Random_Color.jsx";
 import StarRating from "./Components/StarRatingUpdater.jsx";
+import menus from "./Components/tree-view-data.js";
+import TreeView from "./Components/tree-view.jsx";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <StarRating noOfStars={10}/>
       <ImageSlider url={'https://picsum.photos/v2/list'} page={'3'} limit={'10'}/>
       <LoadMoreData/>
+      <TreeView menus={menus}/>
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function StarRating({noOfStars = 5}){
         setHover(rating);
     }
 
-    return <div className="flex">
+    return <div className="flex gap-2 p-4 rounded-xl bg-gradient-to-r from-gray-50 to-slate-50 shadow-sm">
         {
             [...Array(noOfStars)].map((_,index)=> {
                 index +=1
@@ -28,8 +28,9 @@ export default function StarRating({noOfStars = 5}){
                 onMouseMove={()=> handleMouseEnter(index)}
                 onMouseLeave={()=> handleMouseLeave()}
                 size={40}
-                color={index <= (hover || rating) ? "#ffc107" : "#5A5A5A"}
-                style={{ cursor: "pointer" }}
+                className={`transition-colors duration-200 ${
+                    index <= (hover || rating) ? "text-yellow-400" : "text-gray-300"
+                } hover:scale-110 cursor-pointer`}
                 />
             })
         }
