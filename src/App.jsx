@@ -7,6 +7,7 @@ import StarRating from "./Components/StarRatingUpdater.jsx";
 import menus from "./Components/tree-view-data.js";
 import TreeView from "./Components/tree-view.jsx";
 import QRCodeGenerator from "./Components/QR-Code-Generator.jsx"
+import ThemeSwitcher from "./Components/ThemeSwitcher.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <LoadMoreData/>
       <TreeView menus={menus}/>
       <QRCodeGenerator/>
+      <ThemeSwitcher/>
     </div>
   );
 }
