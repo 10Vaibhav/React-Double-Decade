@@ -11,6 +11,7 @@ import ThemeSwitcher from "./Components/ThemeSwitcher.jsx";
 import ScrollIndicator from "./Components/Scroll-Indicator.jsx";
 import TabTest from "./Components/tab-test.jsx";
 import ModalTest from "./Components/Modal-test.jsx";
+import GitHubProfileFinder from "./Components/GitHub-Profile-Finder.jsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
       <TabTest/>
       <ModalTest/>
+      <GitHubProfileFinder/>
     </div>
   );
 }

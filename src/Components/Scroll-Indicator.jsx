@@ -37,6 +37,8 @@ export default function ScrollIndicator({ url }) {
     setScrollPercentage((scrollTop / height) * 100);
   }
 
+  console.log(scrollPercentage);
+
   useEffect(() => {
     const scrollableElement = document.querySelector(".scrollable-container");
     scrollableElement.addEventListener("scroll", handleScrollPercentage);
@@ -56,25 +58,14 @@ export default function ScrollIndicator({ url }) {
 
   return (
     <div className="flex flex-col gap-8 max-w-7xl w-full md:w-[900px] h-[800px] overflow-auto p-6 md:p-8 mx-auto bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl shadow-xl border border-slate-200 scrollable-container">
-
-      <div className="sticky top-0 bg-slate-50/95 backdrop-blur-sm p-4 rounded-lg shadow-sm z-10">
+      <div className="top-container">
         <h1 className="text-3xl font-bold text-slate-800 text-center">
           Custom Scroll Indicator
         </h1>
-
-        <div className="relative h-2 bg-slate-200 mt-4 rounded-full">
-
-          <div
-            className="current-progress-bar absolute top-0 left-0 h-full bg-teal-600 rounded-full transition-all duration-150"
-            style={{ width: `${scrollPercentage}%` }}
-          ></div>
-
-          <span className="absolute -right-7 -top-1 text-xs font-medium text-slate-600">
-            {Math.round(scrollPercentage)}%
-          </span>
+        <div className="scroll-progress-bar">
+          <div className="current-progress-bar" style={{ width: `${scrollPercentage}%` }}></div>
         </div>
       </div>
-
       <div className="text-slate-700 space-y-4 w-full">
         {data && data.length > 0
           ? data.map((dataItem) => (
@@ -84,7 +75,6 @@ export default function ScrollIndicator({ url }) {
             ))
           : null}
       </div>
-
     </div>
   );
 }
