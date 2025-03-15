@@ -9,6 +9,7 @@ import TreeView from "./Components/tree-view.jsx";
 import QRCodeGenerator from "./Components/QR-Code-Generator.jsx"
 import ThemeSwitcher from "./Components/ThemeSwitcher.jsx";
 import ScrollIndicator from "./Components/Scroll-Indicator.jsx";
+import TabTest from "./Components/tab-test.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <QRCodeGenerator/>
       <ThemeSwitcher/>
       <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
+      <TabTest/>
     </div>
   );
 }
