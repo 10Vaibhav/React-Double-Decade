@@ -42,15 +42,15 @@ export default function RandomColor() {
     <div className="max-w-4xl w-full rounded-2xl shadow-lg bg-white overflow-hidden">
       <div className="py-8 px-6 space-x-4 flex justify-center bg-gray-50">
         <button onClick={()=> setTypeOfColor('hex')} 
-          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
+          className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
           Create HEX Color
         </button>
         <button onClick={()=> setTypeOfColor('rgb')} 
-          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
+          className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
           Create RGB Color
         </button>
         <button onClick={typeOfColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor} 
-          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
+          className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow">
           Generate Random Color
         </button>
       </div>
