@@ -58,12 +58,13 @@ export default function ScrollIndicator({ url }) {
 
   return (
     <div className="flex flex-col gap-8 max-w-7xl w-full md:w-[900px] h-[800px] overflow-auto p-6 md:p-8 mx-auto bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl shadow-xl border border-slate-200 scrollable-container">
-      <div className="top-container">
+      <div className="top-0 sticky bg-white">
         <h1 className="text-3xl font-bold text-slate-800 text-center">
           Custom Scroll Indicator
         </h1>
-        <div className="scroll-progress-bar">
-          <div className="current-progress-bar" style={{ width: `${scrollPercentage}%` }}></div>
+        <div className="scroll-progress-bar flex justify-between items-center">
+          <div className="current-progress-bar bg-teal-700 w-3 h-2 rounded-full" style={{ width: `${scrollPercentage}%` }}></div>
+          <span className="text-gray-800">{`${Math.round(scrollPercentage)}%`}</span>
         </div>
       </div>
       <div className="text-slate-700 space-y-4 w-full">
