@@ -12,6 +12,7 @@ import ScrollIndicator from "./Components/Scroll-Indicator.jsx";
 import TabTest from "./Components/tab-test.jsx";
 import ModalTest from "./Components/Modal-test.jsx";
 import GitHubProfileFinder from "./Components/GitHub-Profile-Finder.jsx";
+import SearchAutoComplete from "./Components/SearchAutoComplete-with-API.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <TabTest/>
       <ModalTest/>
       <GitHubProfileFinder/>
+      <SearchAutoComplete/>
     </div>
   );
 }
