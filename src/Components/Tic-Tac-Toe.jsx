@@ -25,6 +25,11 @@ export default function TicTacToe(){
 
     }
 
+    function handleRestart(){
+        setIsXTurn(true);
+        setSquares(Array(9).fill(''));
+    }
+
     function getWinner(squares){
 
         const winningPatterns = [
@@ -54,7 +59,7 @@ export default function TicTacToe(){
         if(!getWinner(squares) && squares.every((item) => item !== '')){
             setStatus('This is a draw! Please restart the game');
         }else if(getWinner(squares)){
-            setStatus(`Winner is ${getWinner(squares)}`);
+            setStatus(`Winner is ${getWinner(squares)}, please restart the game!`);
         }else{
             setStatus(`Next Player is : ${isXTurn ? 'x' : 'O'}`);
         }
@@ -87,6 +92,7 @@ export default function TicTacToe(){
 
             <div className="flex flex-col justify-center items-center py-4">
             <h2 className="text-xl font-bold">{status}</h2>
+            <button onClick={handleRestart} className="px-1 py-2 rounded-md bg-white text-xl border-2 border-gray-900 text-center text-black">Restart</button>
             </div>
         </div>
     )
