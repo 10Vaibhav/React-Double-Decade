@@ -18,6 +18,7 @@ import FeatureFlagGlobalState from "./Components/Feature-Flag-context.jsx";
 import FeatureFlags from "./Components/Feature_Flag.jsx";
 import UseFetchHookTest from "./Components/Test_useFetchHook.jsx";
 import UseOnClickOutSideTest from "./Components/Test_useOutsideClickHook.jsx";
+import UseWindowResizeTest from "./Components/Test_useWindowResizeHook.jsx";
 
 
 function App() {
@@ -59,6 +60,8 @@ function App() {
       <UseFetchHookTest/>
       <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Test UseOutSideClick</h1></div>
       <UseOnClickOutSideTest/>
+      <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Test UseWindowResize</h1></div>
+      <UseWindowResizeTest/>
     </div>
   );
 }
