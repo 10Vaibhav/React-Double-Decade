@@ -17,6 +17,7 @@ import TicTacToe from "./Components/Tic-Tac-Toe.jsx";
 import FeatureFlagGlobalState from "./Components/Feature-Flag-context.jsx";
 import FeatureFlags from "./Components/Feature_Flag.jsx";
 import UseFetchHookTest from "./Components/Test_useFetchHook.jsx";
+import UseOnClickOutSideTest from "./Components/Test_useOutsideClickHook.jsx";
 
 
 function App() {
@@ -56,6 +57,8 @@ function App() {
       </FeatureFlagGlobalState>
       <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Test UseFetchHook</h1></div>
       <UseFetchHookTest/>
+      <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Test UseOutSideClick</h1></div>
+      <UseOnClickOutSideTest/>
     </div>
   );
 }
