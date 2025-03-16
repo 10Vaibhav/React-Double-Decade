@@ -14,6 +14,9 @@ import ModalTest from "./Components/Modal-test.jsx";
 import GitHubProfileFinder from "./Components/GitHub-Profile-Finder.jsx";
 import SearchAutoComplete from "./Components/SearchAutoComplete-with-API.jsx";
 import TicTacToe from "./Components/Tic-Tac-Toe.jsx";
+import FeatureFlagGlobalState from "./Components/Feature-Flag-context.jsx";
+import FeatureFlags from "./Components/Feature_Flag.jsx";
+
 
 function App() {
   return (
@@ -46,6 +49,10 @@ function App() {
       <SearchAutoComplete/>
       <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Tic Tac Toe</h1></div>
       <TicTacToe/>
+      <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Feature Flags</h1></div>
+      <FeatureFlagGlobalState>
+        <FeatureFlags/>
+      </FeatureFlagGlobalState>
     </div>
   );
 }
