@@ -32,7 +32,7 @@ function App() {
       <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Random HEX RGB Color Generator</h1></div>
       <RandomColor/>
       <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Star Rating</h1></div>
-      <StarRating noOfStars={10}/>
+      <StarRating noOfStars={5}/>
       <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Image Slider</h1></div>
       <ImageSlider url={'https://picsum.photos/v2/list'} page={'3'} limit={'10'}/>
       <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Load More Products</h1></div>
