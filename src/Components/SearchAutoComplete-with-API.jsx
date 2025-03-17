@@ -64,7 +64,7 @@ export default function SearchAutoComplete() {
 
   // console.log(users, filteredUsers);
 
-  return <div className="w-[500px] h-[280px] flex flex-col items-center py-4 bg-white max-w-md mx-auto mt-8 border-4 border-cyan-500">
+  return <div className="w-full max-w-[500px] min-h-[280px] flex flex-col items-center py-4 bg-white mx-auto mt-8 border-4 border-cyan-500 px-4">
     {
       loading ?
         <h1 className="text-center text-gray-700 font-semibold py-4">Loading Data ! Please Wait</h1>
@@ -75,7 +75,7 @@ export default function SearchAutoComplete() {
             name="search-users"
             placeholder="Search Users here..."
             onChange={(e) => handleChange(e)}
-            className="w-[300px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent shadow-sm"
+            className="w-full max-w-[300px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent shadow-sm"
           />
         )
     }

@@ -26,10 +26,10 @@ export default function GitHubProfileFinder() {
   }, []);
 
   return (
-    <div className="flex flex-col py-4 items-center space-y-5 bg-green-100 w-[700px] h-[450px]">
-      <div className="">
+    <div className="flex flex-col py-4 items-center space-y-5 bg-green-100 w-full max-w-[700px] min-h-[450px] px-4">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
         <input
-          className="w-[300px] h-[40px] px-4 py-2 border-3 rounded-md border-black"
+          className="w-full sm:w-[300px] h-[40px] px-4 py-2 border-3 rounded-md border-black"
           type="text"
           name="search-by-username"
           placeholder="Search Github Username..."
@@ -38,7 +38,7 @@ export default function GitHubProfileFinder() {
         />
         <button
           onClick={handleSubmit}
-          className="bg-orange-500 hover:bg-orange-600 ml-4 active:bg--700 text-white font-medium py-2 px-4 rounded transition-colors duration-300 focus:outline-none"
+          className="bg-orange-500 hover:bg-orange-600 sm:ml-4 active:bg--700 text-white font-medium py-2 px-4 rounded transition-colors duration-300 focus:outline-none"
         >
           Search
         </button>
