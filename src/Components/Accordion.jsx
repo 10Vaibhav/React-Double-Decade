@@ -24,10 +24,10 @@ export default function Accordion() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-8 rounded-2xl shadow-lg bg-gradient-to-br from-[#FCF8F3] to-white">
-      <div className="flex justify-center mb-8">
+    <div className="max-w-2xl w-[90%] sm:w-full mx-auto p-4 sm:p-8 rounded-2xl shadow-lg bg-gradient-to-br from-[#FCF8F3] to-white">
+      <div className="flex justify-center mb-4 sm:mb-8">
         <button
-          className="px-6 py-3 text-indigo-700 font-medium rounded-lg bg-gradient-to-r from-indigo-100 to-blue-100 hover:from-indigo-200 hover:to-blue-200 transition-all duration-300 shadow-sm hover:shadow"
+          className="px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-indigo-700 font-medium rounded-lg bg-gradient-to-r from-indigo-100 to-blue-100 hover:from-indigo-200 hover:to-blue-200 transition-all duration-300 shadow-sm hover:shadow"
           onClick={() => setEnableMultiSelection(!enableMultiSelection)}
         >
           Enable Multiple Selection

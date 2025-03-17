@@ -19,8 +19,8 @@ export default function ThemeSwitcher() {
     }
 
     return (
-        <div className="w-[1200px] h-[600px] flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
-            <div className="p-8 rounded-lg bg-white dark:bg-gray-800 shadow-lg">
+        <div className="w-[90%] sm:w-[1200px] h-[400px] sm:h-[600px] flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+            <div className="p-4 sm:p-8 rounded-lg bg-white dark:bg-gray-800 shadow-lg">
                 <p className="text-gray-800 dark:text-gray-200 text-xl mb-4">
                     Hello World!
                 </p>

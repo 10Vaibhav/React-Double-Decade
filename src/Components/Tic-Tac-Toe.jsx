@@ -6,7 +6,7 @@ import { useState } from "react"
 // 6 7 8
 
 function Square({value, onClick}){
-    return <button onClick={onClick} className="border-2 border-teal-400 float-left text-2xl h-[100px] text-center w-[100px] mr-2 mt-2 cursor-pointer hover:scale-105 rounded-lg text-black font-bold" >{value}</button>
+    return <button onClick={onClick} className="border-2 border-teal-400 float-left text-xl sm:text-2xl h-[60px] sm:h-[100px] w-[60px] sm:w-[100px] mr-2 mt-2 cursor-pointer hover:scale-105 rounded-lg text-black font-bold" >{value}</button>
 }
 
 export default function TicTacToe(){
@@ -67,7 +67,7 @@ export default function TicTacToe(){
     },[squares, isXTurn]);
 
     return (
-        <div className="w-[600px] h-[800px]flex flex-col border-2 border-teal-600 items-center mt-2 bg-amber-50 rounded-xl py-4">
+        <div className="w-[300px] sm:w-[600px] h-auto sm:h-[800px] flex flex-col border-2 border-teal-600 items-center mt-2 bg-amber-50 rounded-xl py-4">
 
             {/* row - 1*/}
             <div className="flex items-center justify-center">
