@@ -21,6 +21,7 @@ import UseOnClickOutSideTest from "./Components/Test_useOutsideClickHook.jsx";
 import UseWindowResizeTest from "./Components/Test_useWindowResizeHook.jsx";
 import ScrollToTopAndBottom from "./Components/Scroll-toTop&Scroll-to-Bottom.jsx";
 import ErrorBoundary from "./Components/ErrorBoundary.jsx";
+import ScrollToSection from "./Components/ScrollToSection.jsx";
 
 
 function App() {
@@ -68,6 +69,8 @@ function App() {
       <ErrorBoundary>
         <ScrollToTopAndBottom/>
       </ErrorBoundary>
+      <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Scroll To Particular Section</h1></div>
+      <ScrollToSection/>
     </div>
   );
 }
