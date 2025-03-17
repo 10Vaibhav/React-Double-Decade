@@ -19,6 +19,8 @@ import FeatureFlags from "./Components/Feature_Flag.jsx";
 import UseFetchHookTest from "./Components/Test_useFetchHook.jsx";
 import UseOnClickOutSideTest from "./Components/Test_useOutsideClickHook.jsx";
 import UseWindowResizeTest from "./Components/Test_useWindowResizeHook.jsx";
+import ScrollToTopAndBottom from "./Components/Scroll-toTop&Scroll-to-Bottom.jsx";
+import ErrorBoundary from "./Components/ErrorBoundary.jsx";
 
 
 function App() {
@@ -62,6 +64,10 @@ function App() {
       <UseOnClickOutSideTest/>
       <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Test UseWindowResize</h1></div>
       <UseWindowResizeTest/>
+      <div><h1 className="text-slate-950 py-2 px-3 font-bold text-xl">Scroll To Top & Bottom</h1></div>
+      <ErrorBoundary>
+        <ScrollToTopAndBottom/>
+      </ErrorBoundary>
     </div>
   );
 }
